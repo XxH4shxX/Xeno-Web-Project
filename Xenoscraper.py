@@ -1,0 +1,49 @@
+import bs4 as bs
+import urllib.request
+from time import sleep
+
+print ('Xenomercys aka XxTrinityxXX Web Project')
+print ('Version 1.0(Alpha Testing')
+print ('Currently has a web scarper available')
+
+print ('Type help for command listing:')
+menudis = input('>>')
+if (menudis =='help'):
+    print('Xenoscarper - Allows usage of Scraper')
+elif(menudis == 'xenoscraper'):
+    print("Enter Target Url:")
+    urlget = input('>>')
+    #urlget = 'https://pythonprogramming.net/parsememcparseface/'
+    sauce = urllib.request.urlopen(urlget).read()
+    print("Acquiring target address......")
+    sleep(5)
+    print("Copying Elements......")
+    sleep(5)
+    print("Assessement Complete")
+else:
+    exit()
+soup = bs.BeautifulSoup(sauce,'lxml')
+syscmd = input('>>')
+if (syscmd == 'disp-title'):
+    print(soup.title.text)
+elif(syscmd == 'disp-page'):
+    print(soup)
+elif(syscmd == 'help'):
+    print('disp-title  Gathers Title Tags')
+    print('disp-page   Gathers All Tags')
+    print('disp-para   Gathers Paragraph Tags')
+    print('disp-para-all Gathers All Paragraph Tags')
+    print('disp-all-hyper Gathers All Hyper Links')
+    
+elif(syscmd == 'disp-para'):
+    print(soup.p)
+elif(syscmd == 'disp-para-all'):
+    print(soup.find_all('p'))
+elif(syscmd == 'disp-all-hyper'):
+    for url in soup.find_all('a'):
+        print(url.get('href'))
+
+##for url in soup.find_all('a'):
+##    print(url.get('href'))
+
+
