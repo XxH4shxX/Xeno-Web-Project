@@ -42,6 +42,15 @@ elif(syscmd == 'disp-para-all'):
 elif(syscmd == 'disp-all-hyper'):
     for url in soup.find_all('a'):
         print(url.get('href'))
+elif(syscmd == 'mod-spec-id'):
+    spec_id = input('>>')
+    print('Locating id protocol....')
+    sleep(3)
+    print('Modifing id reference....')
+    sleep(3)
+    soup.find(id == spec_id)
+    print('Modification Complete')
+
 
 ##for url in soup.find_all('a'):
 ##    print(url.get('href'))
