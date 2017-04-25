@@ -34,6 +34,8 @@ elif(syscmd == 'help'):
     print('disp-para   Gathers Paragraph Tags')
     print('disp-para-all Gathers All Paragraph Tags')
     print('disp-all-hyper Gathers All Hyper Links')
+    print('mod-spec-id   Modifies Specific id')
+    print('grep-all      Gathers All text on Page')
     
 elif(syscmd == 'disp-para'):
     print(soup.p)
@@ -42,6 +44,8 @@ elif(syscmd == 'disp-para-all'):
 elif(syscmd == 'disp-all-hyper'):
     for url in soup.find_all('a'):
         print(url.get('href'))
+elif(syscmd == 'grep-all'):
+    print(soup.get_text())
 elif(syscmd == 'mod-spec-id'):
     spec_id = input('>>')
     print('Locating id protocol....')
@@ -50,6 +54,22 @@ elif(syscmd == 'mod-spec-id'):
     sleep(3)
     soup.find(id == spec_id)
     print('Modification Complete')
+else:
+    end()
+ 
+syscmd = input('>>')
+if (syscmd == 'cp-file'):
+    filec = input(">>")
+    filesel= open(filec,'wb')
+    print('Writing to filez:'filesel.name)
+    print('Loading 50%')
+    sleep(3)
+    print('Loading 100%')
+    sleep(2)
+    filesel.close()
+    print('File Saved')
+    
+
 
 
 ##for url in soup.find_all('a'):
