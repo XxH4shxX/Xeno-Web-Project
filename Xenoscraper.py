@@ -7,15 +7,6 @@ print ('Version 1.0(Alpha Testing')
 print ('Currently has a web scarper available')
 # edited but not tested after this 
 
-def helpusr():
-    print('disp-title  Gathers Title Tags')
-    print('disp-page   Gathers All Tags')
-    print('disp-para   Gathers Paragraph Tags')
-    print('disp-para-all Gathers All Paragraph Tags')
-    print('disp-all-hyper Gathers All Hyper Links')
-    print('mod-spec-id   Modifies Specific id')
-    print('grep-all      Gathers All text on Page')
-    print('cp-file       Copies file to selected file')
 
 #end of edited text
 
@@ -85,15 +76,7 @@ if (syscmd == 'cp-file'):
     print('File Saved')
 # edited but not tested after this 
 
-def helpusr():
-    print('disp-title  Gathers Title Tags')
-    print('disp-page   Gathers All Tags')
-    print('disp-para   Gathers Paragraph Tags')
-    print('disp-para-all Gathers All Paragraph Tags')
-    print('disp-all-hyper Gathers All Hyper Links')
-    print('mod-spec-id   Modifies Specific id')
-    print('grep-all      Gathers All text on Page')
-    print('cp-file       Copies file to selected file')
+
     
     
 
